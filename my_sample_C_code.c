@@ -23,7 +23,7 @@ extern int my_sample_host_code( int x, int y);
 
 
 
-void my_sample_c_code(int *output) {
+void my_sample_C_function(int *output) {
 
    // code, code, then
 

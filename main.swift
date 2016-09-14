@@ -10,7 +10,7 @@ import Foundation
 
 
 var output: CInt = 0
-my_sample_c_code(&output)
+my_sample_C_function(&output)
 
 print(output)
 
