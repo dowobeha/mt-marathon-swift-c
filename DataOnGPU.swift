@@ -9,13 +9,15 @@ class DataOnGPU {
 
 class CUDA_Vector {
 
+	var data_on_device : UnsafeMutablePointer<Void>
+
 	init() {
 	
 		let sizeof_float = CInt(sizeof(CFloat))
 		print("sizeof(float) = \(sizeof_float)")
 		let data : [Float] = Array(count: 3, repeatedValue: 7.0)
 		let N = CInt(data.count)
-		var data_on_device : UnsafeMutablePointer<Void> = nil
+		data_on_device = nil
 		cudaMalloc(&data_on_device, data.count * sizeof(CFloat));
 		cudaMemcpy(data_on_device, data, data.count * sizeof(CFloat), cudaMemcpyHostToDevice);	
 		
@@ -38,5 +40,9 @@ class CUDA_Vector {
 		print("sum = \(sum)")
 	}
 
+
+	deinit {
+		cudaFree(data_on_device)
+	}
 
 }
