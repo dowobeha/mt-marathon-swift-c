@@ -1,6 +1,7 @@
 Usage:
 
-```make
+```
+make
 ./toy
 3
 3
