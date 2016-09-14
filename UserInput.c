@@ -19,11 +19,11 @@ void getInput(int *output) {
 
 #include <cuda_runtime_api.h>
 
-extern int func_B( int x, int y);
+extern int my_sample_host_code( int x, int y);
 
 
 
-void getInput(int *output) {
+void my_sample_c_code(int *output) {
 
    // code, code, then
 

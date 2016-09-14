@@ -12,11 +12,7 @@ class CUBLAS {
 			return nil
 		}
 	}
-	/*
-	func getHandle() -> UnsafeMutablePointer<Void> {
-		return handle
-	}
-	*/
+
 	deinit {
 		cublasDestroy_v2(handle)
 	}
@@ -30,36 +26,23 @@ class CUDA_Vector {
 
 	private let cublas : CUBLAS
 
-	//let size : CInt
 	let count : Int
 	let byteCount : Int
 
 
 	init?(_ cublas:CUBLAS, count:Int) {
-	
-		self.cublas = cublas
-	
-		self.count = count
+
 		self.byteCount = count * sizeof(CFloat)
-		
-	
-		//let sizeof_float = CInt(sizeof(CFloat))
-		//print("sizeof(float) = \(sizeof_float)")
-		//let data : [Float] = Array(count: 3, repeatedValue: 7.0)
-		//self.size = CInt(data.count)
+
 		data_on_device = nil
 		let status = cudaMalloc(&data_on_device, self.byteCount);
 		
-		if (status != cudaSuccess) {
+		if (status == cudaSuccess) {
+			self.cublas = cublas
+			self.count = count
+		} else {
 			return nil
 		}
-		
-		//cudaMemcpy(data_on_device, data, data.count * sizeof(CFloat), cudaMemcpyHostToDevice);	
-
-//		var cublasHandle : COpaquePointer = nil
-		//var cublasStatus = cublasCreate_v2(cublas.handle)
-		//print("cublasCreate_v2: \(cublasStatus==CUBLAS_STATUS_SUCCESS)")
-		
 
 	}
 
@@ -88,16 +71,12 @@ class CUDA_Vector {
 	
 	func sum() -> Float? {
 		
-		var sum : Float = -1
+		var sum : Float = Float.NaN
 		let immutable_data_on_device = UnsafePointer<Float>(data_on_device)
-		print("CUDA_Vector.count = \(Int32(self.count))")
-		print("sum = \(sum)")
+
 		let status = cublasSasum_v2(cublas.handle, Int32(self.count), immutable_data_on_device , 1, &sum)
 		
 		if (status==CUBLAS_STATUS_SUCCESS) {
-				
-			print("cublasSasum_v2: \(status==CUBLAS_STATUS_SUCCESS)")
-			print("sum = \(sum)")
 			return sum
 		} else {
 			return nil

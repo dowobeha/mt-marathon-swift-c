@@ -1,14 +1,14 @@
 #include <stdio.h>
 
 __global__
-void saxpy(int n, float a, float *x, float *y)
+void my_sample_device_code(int n, float a, float *x, float *y)
 {
   int i = blockIdx.x*blockDim.x + threadIdx.x;
   if (i < n) y[i] = a*x[i] + y[i];
 }
 
 
-extern "C" int func_B( int x1, int y1 )
+extern "C" int my_sample_host_code( int x1, int y1 )
 
 {
 
@@ -29,7 +29,7 @@ extern "C" int func_B( int x1, int y1 )
   cudaMemcpy(d_y, y, N*sizeof(float), cudaMemcpyHostToDevice);
 
   // Perform SAXPY on 1M elements
-  saxpy<<<(N+255)/256, 256>>>(N, 2.0f, d_x, d_y);
+  my_sample_device_code<<<(N+255)/256, 256>>>(N, 2.0f, d_x, d_y);
 
   cudaMemcpy(y, d_y, N*sizeof(float), cudaMemcpyDeviceToHost);
 

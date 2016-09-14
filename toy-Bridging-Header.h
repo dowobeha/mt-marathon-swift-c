@@ -2,8 +2,8 @@
 //  Use this file to import your target's public headers that you would like to expose to Swift.
 //
 
-int func_B( int x, int y);
-void getInput(int *output);
+int my_sample_host_code( int x, int y);
+void my_sample_c_code(int *output);
 
 #include <cuda.h>
 

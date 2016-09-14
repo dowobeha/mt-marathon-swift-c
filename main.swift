@@ -10,7 +10,7 @@ import Foundation
 
 
 var output: CInt = 0
-getInput(&output)
+my_sample_c_code(&output)
 
 print(output)
 
@@ -18,9 +18,11 @@ if let cublas = CUBLAS() {
 
 	if let v = CUDA_Vector(cublas, count:3) {
 
-		v.copyDataToDevice(Array(count: 3, repeatedValue: 7.0))
+		let localData : [Float] = Array(count: 3, repeatedValue: 7.0)
+
+		v.copyDataToDevice(localData)
 		if let sum = v.sum() {
-			print(sum)
+			print("Summing the values of \(localData) on the GPU results in value \(sum)")
 		}
 	}
 
