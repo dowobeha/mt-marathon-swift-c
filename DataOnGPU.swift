@@ -1,12 +1,3 @@
-class DataOnGPU {
-
-	func foo() -> Void {
-		print("Hello, world")
-	}
-
-}
-
-
 class CUBLAS {
 
 	let handle : COpaquePointer

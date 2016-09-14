@@ -14,9 +14,6 @@ getInput(&output)
 
 print(output)
 
-let x = DataOnGPU()
-x.foo()
-
 if let cublas = CUBLAS() {
 
 	if let v = CUDA_Vector(cublas, count:3) {
