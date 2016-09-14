@@ -1,2 +1,4 @@
 *.o
 toy
+tmp.cu
+*.dryrun*
