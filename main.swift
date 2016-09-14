@@ -16,3 +16,5 @@ print(output)
 
 let x = DataOnGPU()
 x.foo()
+
+let v = CUDA_Vector()

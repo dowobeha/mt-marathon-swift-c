@@ -6,7 +6,50 @@ CompileSwiftSources normal x86_64 com.apple.xcode.tools.swift.compiler
     cd /Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy
     export DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer
     export SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk
-    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -incremental -module-name toy -O -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -target x86_64-apple-macosx10.11 -g -Xfrontend -serialize-debugging-options -I /Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/Release -F /Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/Release -c -j8 /Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/toy/main.swift -output-file-map /Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/toy.build/Release/toy.build/Objects-normal/x86_64/toy-OutputFileMap.json -parseable-output -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/toy.build/Release/toy.build/Objects-normal/x86_64/toy.swiftmodule -Xcc -I/Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/toy.build/Release/toy.build/swift-overrides.hmap -Xcc -iquote -Xcc /Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/toy.build/Release/toy.build/toy-generated-files.hmap -Xcc -I/Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/toy.build/Release/toy.build/toy-own-target-headers.hmap -Xcc -I/Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/toy.build/Release/toy.build/toy-all-target-headers.hmap -Xcc -iquote -Xcc /Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/toy.build/Release/toy.build/toy-project-headers.hmap -Xcc -I/Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/Release/include -Xcc -I/Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/toy.build/Release/toy.build/DerivedSources/x86_64 -Xcc -I/Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/toy.build/Release/toy.build/DerivedSources -emit-objc-header -emit-objc-header-path /Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/toy.build/Release/toy.build/Objects-normal/x86_64/toy-Swift.h -import-objc-header /Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/toy/toy-Bridging-Header.h -Xcc -working-directory/Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc 
+		-incremental 
+		-module-name toy 
+		-O 
+		-sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk 
+		-target x86_64-apple-macosx10.11 
+		-g 
+		-Xfrontend 
+		-serialize-debugging-options 
+		-I /Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/Release 
+		-F /Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/Release 
+		-c -j8 /Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/toy/main.swift 
+		-output-file-map /Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/toy.build/Release/toy.build/Objects-normal/x86_64/toy-OutputFileMap.json 
+		-parseable-output 
+		-serialize-diagnostics 
+		-emit-dependencies 
+		-emit-module 
+		-emit-module-path /Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/toy.build/Release/toy.build/Objects-normal/x86_64/toy.swiftmodule 
+		-Xcc 
+	-I/Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/toy.build/Release/toy.build/swift-overrides.hmap 
+		-Xcc 
+		-iquote 
+		-Xcc /Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/toy.build/Release/toy.build/toy-generated
+		-files.hmap 
+		-Xcc -I/Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/toy.build/Release/toy.build/toy-own-target-headers.hmap 
+		-Xcc -I/Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/toy.build/Release/toy.build/toy-all-target-headers.hmap 
+		-Xcc 
+		-iquote 
+		-Xcc /Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/toy.build/Release/toy.build/toy-project-headers.hmap 
+		-Xcc -I/Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/Release/include 
+		-Xcc -I/Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/toy.build/Release/toy.build/DerivedSources/x86_64 
+		-Xcc -I/Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/toy.build/Release/toy.build/DerivedSources 
+		-emit-objc-header 
+		-emit-objc-header-path /Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/toy.build/Release/toy.build/Objects-normal/x86_64/toy-Swift.h 
+		-import-objc-header /Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/toy/toy-Bridging-Header.h 
+		-Xcc -working-directory/Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy
+
+
+
+
+
+
+
+
 
 Ditto build/toy.build/Release/toy.build/DerivedSources/toy-Swift.h build/toy.build/Release/toy.build/Objects-normal/x86_64/toy-Swift.h
     cd /Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy
@@ -19,7 +62,71 @@ Ditto build/Release/toy.swiftmodule/x86_64.swiftmodule build/toy.build/Release/t
 CompileC build/toy.build/Release/toy.build/Objects-normal/x86_64/UserInput.o toy/UserInput.c normal x86_64 c com.apple.compilers.llvm.clang.1_0.compiler
     cd /Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy
     export LANG=en_US.US-ASCII
-    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fmodules -fmodules-prune-interval=86400 -fmodules-prune-after=345600 -fbuild-session-file=/var/folders/2j/5hfnshdj4kg0vsnf4lk7y5280000gp/C/org.llvm.clang/ModuleCache/Session.modulevalidation -fmodules-validate-once-per-build-session -Wnon-modular-include-in-framework-module -Werror=non-modular-include-in-framework-module -Wno-trigraphs -fpascal-strings -Os -fno-common -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wunreachable-code -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -mmacosx-version-min=10.11 -g -fvisibility=hidden -Wno-sign-conversion -iquote /Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/toy.build/Release/toy.build/toy-generated-files.hmap -I/Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/toy.build/Release/toy.build/toy-own-target-headers.hmap -I/Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/toy.build/Release/toy.build/toy-all-target-headers.hmap -iquote /Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/toy.build/Release/toy.build/toy-project-headers.hmap -I/Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/Release/include -I/Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/toy.build/Release/toy.build/DerivedSources/x86_64 -I/Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/toy.build/Release/toy.build/DerivedSources -F/Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/Release -MMD -MT dependencies -MF /Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/toy.build/Release/toy.build/Objects-normal/x86_64/UserInput.d --serialize-diagnostics /Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/toy.build/Release/toy.build/Objects-normal/x86_64/UserInput.dia -c /Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/toy/UserInput.c -o /Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/toy.build/Release/toy.build/Objects-normal/x86_64/UserInput.o
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang 
+    	-x c 
+    	-arch x86_64 
+    	-fmessage-length=0 
+    	-fdiagnostics-show-note-include-stack 
+    	-fmacro-backtrace-limit=0 
+    	-std=gnu99 
+    	-fmodules 
+    	-fmodules-prune-interval=86400 
+    	-fmodules-prune-after=345600 
+    	-fbuild-session-file=/var/folders/2j/5hfnshdj4kg0vsnf4lk7y5280000gp/C/org.llvm.clang/ModuleCache/Session.modulevalidation 
+    	-fmodules-validate-once-per-build-session 
+    	-Wnon-modular-include-in-framework-module 
+    	-Werror=non-modular-include-in-framework-module 
+    	-Wno-trigraphs 
+    	-fpascal-strings 
+    	-Os 
+    	-fno-common 
+    	-Wno-missing-field-initializers 
+    	-Wno-missing-prototypes 
+    	-Werror=return-type 
+    	-Wunreachable-code 
+    	-Werror=deprecated-objc-isa-usage 
+    	-Werror=objc-root-class 
+    	-Wno-missing-braces 
+    	-Wparentheses 
+    	-Wswitch 
+    	-Wunused-function 
+    	-Wno-unused-label 
+    	-Wno-unused-parameter 
+    	-Wunused-variable 
+    	-Wunused-value 
+    	-Wempty-body 
+    	-Wconditional-uninitialized 
+    	-Wno-unknown-pragmas 
+    	-Wno-shadow 
+    	-Wno-four-char-constants 
+    	-Wno-conversion 
+    	-Wconstant-conversion 
+    	-Wint-conversion 
+    	-Wbool-conversion 
+    	-Wenum-conversion 
+    	-Wshorten-64-to-32 
+    	-Wpointer-sign 
+    	-Wno-newline-eof 
+    	-isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk 
+    	-fasm-blocks 
+    	-fstrict-aliasing 
+    	-Wdeprecated-declarations 
+    	-mmacosx-version-min=10.11 
+    	-g 
+    	-fvisibility=hidden 
+    	-Wno-sign-conversion 
+    	-iquote /Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/toy.build/Release/toy.build/toy-generated-files.hmap 
+    	-I/Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/toy.build/Release/toy.build/toy-own-target-headers.hmap 
+    	-I/Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/toy.build/Release/toy.build/toy-all-target-headers.hmap 
+    	-iquote /Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/toy.build/Release/toy.build/toy-project-headers.hmap 
+    	-I/Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/Release/include 
+    	-I/Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/toy.build/Release/toy.build/DerivedSources/x86_64 
+    	-I/Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/toy.build/Release/toy.build/DerivedSources 
+    	-F/Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/Release -MMD -MT dependencies 
+    	-MF /Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/toy.build/Release/toy.build/Objects-normal/x86_64/UserInput.d 
+    	--serialize-diagnostics /Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/toy.build/Release/toy.build/Objects-normal/x86_64/UserInput.dia 
+    	-c /Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/toy/UserInput.c 
+    	-o /Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/toy.build/Release/toy.build/Objects-normal/x86_64/UserInput.o
 
 Ditto build/Release/toy.swiftmodule/x86_64.swiftdoc build/toy.build/Release/toy.build/Objects-normal/x86_64/toy.swiftdoc
     cd /Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy
@@ -28,7 +135,24 @@ Ditto build/Release/toy.swiftmodule/x86_64.swiftdoc build/toy.build/Release/toy.
 Ld build/Release/toy normal x86_64
     cd /Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy
     export MACOSX_DEPLOYMENT_TARGET=10.11
-    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk -L/Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/Release -F/Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/Release -filelist /Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/toy.build/Release/toy.build/Objects-normal/x86_64/toy.LinkFileList -Xlinker -rpath -Xlinker @executable_path/../Frameworks -Xlinker -rpath -Xlinker @loader_path/../Frameworks -mmacosx-version-min=10.11 -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift_static/macosx -Xlinker -force_load_swift_libs -lc++ -framework Foundation -Xlinker -add_ast_path -Xlinker /Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/toy.build/Release/toy.build/Objects-normal/x86_64/toy.swiftmodule -Xlinker -dependency_info -Xlinker /Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/toy.build/Release/toy.build/Objects-normal/x86_64/toy_dependency_info.dat -o /Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/Release/toy
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang 
+    -arch x86_64 
+    -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk 
+    -L/Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/Release 
+    -F/Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/Release 
+    -filelist /Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/toy.build/Release/toy.build/Objects-normal/x86_64/toy.LinkFileList 
+    -Xlinker 
+    -rpath 
+    -Xlinker @executable_path/../Frameworks 
+    -Xlinker 
+    -rpath -Xlinker @loader_path/../Frameworks -mmacosx-version-min=10.11 
+    -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift_static/macosx 
+    -Xlinker -force_load_swift_libs -lc++ -framework Foundation -Xlinker -add_ast_path 
+    -Xlinker /Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/toy.build/Release/toy.build/Objects-normal/x86_64/toy.swiftmodule 
+    -Xlinker 
+    -dependency_info 
+    -Xlinker /Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/toy.build/Release/toy.build/Objects-normal/x86_64/toy_dependency_info.dat 
+    -o /Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy/build/Release/toy
 
 GenerateDSYMFile build/Release/toy.dSYM build/Release/toy
     cd /Users/lanes/work_active/2016_09_MTM_Prague/cuda-samples/swift/toy

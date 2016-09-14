@@ -5,3 +5,6 @@
 int func_B( int x, int y);
 void getInput(int *output);
 
+#include <cuda.h>
+
+#include <cuda_runtime_api.h>

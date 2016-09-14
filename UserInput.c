@@ -15,6 +15,9 @@ void getInput(int *output) {
   baz();
 }
 */
+#include <cuda.h>
+
+#include <cuda_runtime_api.h>
 
 extern int func_B( int x, int y);
 
@@ -24,7 +27,11 @@ void getInput(int *output) {
 
    // code, code, then
 
-	func_B( 1, 2 );
+	//func_B( 1, 2 );
+	int dev = 0;
+        struct cudaDeviceProp deviceProp;
+        cudaGetDeviceProperties(&deviceProp, dev);
 
+        printf("\nDevice %d: \"%s\"\n", dev, deviceProp.name);
 
 }
