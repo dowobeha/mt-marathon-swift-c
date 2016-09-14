@@ -6,11 +6,11 @@ SWIFT_SDK=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/D
 SWIFT_TARGET=${ARCH}-apple-macosx10.11
 XLINKER=
 
-toy: main.o UserInput.o saxpy.o DataOnGPU.o
-	swiftc -target ${SWIFT_TARGET} -sdk ${SWIFT_SDK} DataOnGPU.o main.o UserInput.o saxpy.o -o toy ${XLINKER} -L/usr/local/cuda/lib ${XLINKER} -lcuda ${XLINKER} -lcudart -lcublas -F/Library/Frameworks -module-name toy 
+toy: main.o UserInput.o saxpy.o DataOnGPU.o cublas.o
+	swiftc -target ${SWIFT_TARGET} -sdk ${SWIFT_SDK} DataOnGPU.o main.o UserInput.o saxpy.o cublas.o -o toy ${XLINKER} -L/usr/local/cuda/lib ${XLINKER} -lcuda ${XLINKER} -lcudart -lcublas -F/Library/Frameworks -module-name toy 
 
-main.o DataOnGPU.o: main.swift toy-Bridging-Header.h DataOnGPU.swift
-	swiftc -I/usr/local/cuda/include  -module-name toy -target ${SWIFT_TARGET} -sdk ${SWIFT_SDK} -import-objc-header toy-Bridging-Header.h -c main.swift -c DataOnGPU.swift
+main.o DataOnGPU.o cublas.o: main.swift toy-Bridging-Header.h DataOnGPU.swift
+	swiftc -I/usr/local/cuda/include  -module-name toy -target ${SWIFT_TARGET} -sdk ${SWIFT_SDK} -import-objc-header toy-Bridging-Header.h -c main.swift -c DataOnGPU.swift -c cublas.swift
 
 #DataOnGPU.o: DataOnGPU.swift
 #	swiftc -module-name toy -target ${SWIFT_TARGET} -sdk ${SWIFT_SDK} -c DataOnGPU.swift

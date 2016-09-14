@@ -16,12 +16,12 @@ print(output)
 
 if let cublas = CUBLAS() {
 
-	if let v = CUDA_Vector(cublas, count:3) {
+	if let v = CudaVector(cublas, count:3) {
 
 		let localData : [Float] = Array(count: 3, repeatedValue: 7.0)
 
 		v.copyDataToDevice(localData)
-		if let sum = v.sum() {
+		if let sum = cublas.sum(v) {
 			print("Summing the values of \(localData) on the GPU results in value \(sum)")
 		}
 	}

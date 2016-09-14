@@ -1,28 +1,6 @@
-class CUBLAS {
+class CudaVector {
 
-	let handle : COpaquePointer
-
-	init?() {
-		var cublasHandle : COpaquePointer = nil
-		let status = cublasCreate_v2(&cublasHandle)
-		
-		if (status==CUBLAS_STATUS_SUCCESS) {
-			handle = cublasHandle
-		} else {
-			return nil
-		}
-	}
-
-	deinit {
-		cublasDestroy_v2(handle)
-	}
-
-}
-
-
-class CUDA_Vector {
-
-	private var data_on_device : UnsafeMutablePointer<Void>
+	var data_on_device : UnsafeMutablePointer<Void>
 
 	private let cublas : CUBLAS
 
@@ -66,22 +44,6 @@ class CUDA_Vector {
 		} else {
 			return nil
 		}
-	}
-	
-	
-	func sum() -> Float? {
-		
-		var sum : Float = Float.NaN
-		let immutable_data_on_device = UnsafePointer<Float>(data_on_device)
-
-		let status = cublasSasum_v2(cublas.handle, Int32(self.count), immutable_data_on_device , 1, &sum)
-		
-		if (status==CUBLAS_STATUS_SUCCESS) {
-			return sum
-		} else {
-			return nil
-		}
-
 	}
 
 
