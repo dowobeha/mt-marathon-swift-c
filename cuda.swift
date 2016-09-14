@@ -30,12 +30,10 @@ class CudaVector {
 	
 	func copyDataFromDevice() -> [Float]? {
 			
-		var result : [Float] = Array(count: 3, repeatedValue: 3.0)
-		print(result[0])
+		var result : [Float] = Array(count: self.count, repeatedValue: Float.NaN)
 		let status = cudaMemcpy(&result, data_on_device, Int(self.count) * sizeof(CFloat), cudaMemcpyDeviceToHost);
 		
 		if (status==cudaSuccess) {
-			print(result[0])	
 			return result
 		} else {
 			return nil
