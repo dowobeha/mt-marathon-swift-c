@@ -33,6 +33,21 @@ extern "C" int func_B( int x1, int y1 )
 
   cudaMemcpy(y, d_y, N*sizeof(float), cudaMemcpyDeviceToHost);
 
+int result;
+result = -1;
+cudaGetDeviceCount ( &result );
+printf("CUDA device count: %d\n", result);
+
+result = -2;
+	cudaGetDevice(&result);
+	printf("CUDA device number: %d\n", result);
+
+	int dev = 0;
+        cudaDeviceProp deviceProp;
+        cudaGetDeviceProperties(&deviceProp, dev);
+
+        printf("\nDevice %d: \"%s\"\n", dev, deviceProp.name);
+
   float maxError = 0.0f;
   for (int i = 0; i < N; i++)
     maxError = max(maxError, abs(y[i]-4.0f));
