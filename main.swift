@@ -13,3 +13,6 @@ var output: CInt = 0
 getInput(&output)
 
 print(output)
+
+let x = DataOnGPU()
+x.foo()
