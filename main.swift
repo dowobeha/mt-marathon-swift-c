@@ -17,4 +17,14 @@ print(output)
 let x = DataOnGPU()
 x.foo()
 
-let v = CUDA_Vector()
+if let cublas = CUBLAS() {
+
+	if let v = CUDA_Vector(cublas, count:3) {
+
+		v.copyDataToDevice(Array(count: 3, repeatedValue: 7.0))
+		if let sum = v.sum() {
+			print(sum)
+		}
+	}
+
+}
