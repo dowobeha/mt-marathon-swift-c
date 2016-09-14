@@ -16,7 +16,7 @@ print(output)
 
 if let cublas = CUBLAS() {
 
-	if let v = CudaVector(cublas, count:3) {
+	if let v = CudaVector(count:3) {
 
 		let localData : [Float] = Array(count: 3, repeatedValue: 7.0)
 

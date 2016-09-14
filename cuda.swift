@@ -2,13 +2,10 @@ class CudaVector {
 
 	var data_on_device : UnsafeMutablePointer<Void>
 
-	private let cublas : CUBLAS
-
 	let count : Int
 	let byteCount : Int
 
-
-	init?(_ cublas:CUBLAS, count:Int) {
+	init?(count:Int) {
 
 		self.byteCount = count * sizeof(CFloat)
 
@@ -16,7 +13,6 @@ class CudaVector {
 		let status = cudaMalloc(&data_on_device, self.byteCount);
 		
 		if (status == cudaSuccess) {
-			self.cublas = cublas
 			self.count = count
 		} else {
 			return nil
