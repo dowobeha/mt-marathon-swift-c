@@ -8,3 +8,6 @@ void getInput(int *output);
 #include <cuda.h>
 
 #include <cuda_runtime_api.h>
+
+#include <cublas_v2.h>
+
