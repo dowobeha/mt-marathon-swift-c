@@ -11,9 +11,6 @@ toy: main.o UserInput.o saxpy.o cuda.o cublas.o
 main.o cuda.o cublas.o: main.swift toy-Bridging-Header.h cuda.swift
 	swiftc -I/usr/local/cuda/include  -module-name toy -target ${SWIFT_TARGET} -sdk ${SWIFT_SDK} -import-objc-header toy-Bridging-Header.h -c main.swift -c cuda.swift -c cublas.swift
 
-#cuda.o: cuda.swift
-#	swiftc -module-name toy -target ${SWIFT_TARGET} -sdk ${SWIFT_SDK} -c cuda.swift
-
 UserInput.o: UserInput.c
 	clang -I/usr/local/cuda/include -x c -arch ${ARCH} -c UserInput.c -o UserInput.o
 
