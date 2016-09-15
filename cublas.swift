@@ -18,7 +18,7 @@ class CUBLAS {
 	}
 
 
-	func sum(vector:CudaVector) -> Float? {
+	func asum(vector:CudaVector) -> Float? {
 		
 		var sum : Float = Float.NaN
 		let immutable_data_on_device = UnsafePointer<Float>(vector.data_on_device)

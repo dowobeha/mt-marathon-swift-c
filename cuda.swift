@@ -9,7 +9,7 @@ class CudaVector {
 
 		self.byteCount = count * sizeof(CFloat)
 
-		data_on_device = nil
+		self.data_on_device = nil
 		let status = cudaMalloc(&data_on_device, self.byteCount);
 		
 		if (status == cudaSuccess) {
@@ -20,9 +20,17 @@ class CudaVector {
 
 	}
 
+	func copyDataWithinDevice(other:CudaVector) -> Bool {
+	
+		let success = cudaMemcpy(data_on_device, other.data_on_device, self.byteCount, cudaMemcpyDeviceToDevice);
+	
+		return (success == cudaSuccess)
+	
+	}
+
 	func copyDataToDevice(data:[Float]) -> Bool {
 	
-		let success = cudaMemcpy(data_on_device, data, data.count * sizeof(CFloat), cudaMemcpyHostToDevice);
+		let success = cudaMemcpy(data_on_device, data, self.byteCount, cudaMemcpyHostToDevice);
 	
 		return (success == cudaSuccess)
 	
@@ -31,7 +39,7 @@ class CudaVector {
 	func copyDataFromDevice() -> [Float]? {
 			
 		var result : [Float] = Array(count: self.count, repeatedValue: Float.NaN)
-		let status = cudaMemcpy(&result, data_on_device, Int(self.count) * sizeof(CFloat), cudaMemcpyDeviceToHost);
+		let status = cudaMemcpy(&result, data_on_device, self.byteCount, cudaMemcpyDeviceToHost);
 		
 		if (status==cudaSuccess) {
 			return result
