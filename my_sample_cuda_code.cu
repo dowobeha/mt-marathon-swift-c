@@ -51,6 +51,14 @@ void calculate_sum(float *data, int number_of_data_points) {
 }
 */
 
+/*
+extern "C"
+cublasHandle_t initializeCublas() {
+	cublasHandle_t* handle;
+	cublasCreate_v2(handle);
+	return *handle;
+}
+*/
 
 extern "C" int my_sample_host_code( int x1, int y1 )
 

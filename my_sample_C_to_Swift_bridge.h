@@ -14,3 +14,4 @@ void calculate_times_equals(float *lhs, float *rhs, int number_of_data_points);
 
 #include <cublas_v2.h>
 
+cublasHandle_t initializeCublas();
