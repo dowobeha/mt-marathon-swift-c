@@ -3,6 +3,6 @@ import PackageDescription
 let package = Package(
     name: "MTMarathon",
     dependencies: [
-        .Package(url: "../SwiftCUDA", majorVersion: 0)
+        .Package(url: "https://github.com/rxwei/SwiftCUDA", majorVersion: 1)
     ]
 )
