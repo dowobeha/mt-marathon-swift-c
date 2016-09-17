@@ -1,0 +1,177 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "CUBLAS"
+provides-nominal:
+- "C10MTMarathon6CUBLAS"
+provides-member:
+- ["C10MTMarathon6CUBLAS", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- "OpaquePointer"
+- !private "cublasCreate_v2"
+- "CudaVector"
+- !private "initializeCublas"
+- !private "IntegerLiteralType"
+- !private "cublasSasum_v2"
+- !private "CUBLAS_STATUS_SUCCESS"
+- !private "FloatLiteralType"
+- "CUBLAS"
+- !private "cublasHandle"
+- "Float"
+- !private "cublasDestroy_v2"
+- !private "Int32"
+- "AssignmentPrecedence"
+- !private "=="
+depends-member:
+- !private ["Ps16AbsoluteValuable", "nan"]
+- !private ["Ps9AnyObject", "CUBLAS_STATUS_SUCCESS"]
+- !private ["Ps9AnyObject", "Float"]
+- !private ["Ps9AnyObject", "Int32"]
+- !private ["Ps9AnyObject", "count"]
+- !private ["Ps9AnyObject", "cublasCreate_v2"]
+- !private ["Ps9AnyObject", "cublasDestroy_v2"]
+- !private ["Ps9AnyObject", "cublasHandle"]
+- !private ["Ps9AnyObject", "cublasSasum_v2"]
+- !private ["Ps9AnyObject", "floatPointer"]
+- !private ["Ps9AnyObject", "handle"]
+- !private ["Ps9AnyObject", "initializeCublas"]
+- ["Ps9AnyObject", ""]
+- !private ["Ps19BinaryFloatingPoint", "nan"]
+- !private ["Ps17BitwiseOperations", "init"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- ["Sb", "deinit"]
+- !private ["C10MTMarathon6CUBLAS", "CUBLAS_STATUS_SUCCESS"]
+- ["C10MTMarathon6CUBLAS", "CudaVector"]
+- ["C10MTMarathon6CUBLAS", "Float"]
+- !private ["C10MTMarathon6CUBLAS", "Int32"]
+- ["C10MTMarathon6CUBLAS", "OpaquePointer"]
+- ["C10MTMarathon6CUBLAS", "asum"]
+- !private ["C10MTMarathon6CUBLAS", "cublasCreate_v2"]
+- !private ["C10MTMarathon6CUBLAS", "cublasDestroy_v2"]
+- !private ["C10MTMarathon6CUBLAS", "cublasHandle"]
+- !private ["C10MTMarathon6CUBLAS", "cublasSasum_v2"]
+- ["C10MTMarathon6CUBLAS", "deinit"]
+- ["C10MTMarathon6CUBLAS", "handle"]
+- ["C10MTMarathon6CUBLAS", "init"]
+- !private ["C10MTMarathon6CUBLAS", "initializeCublas"]
+- !private ["Ps7CVarArg", "init"]
+- !private ["Ps7CVarArg", "nan"]
+- !private ["Ps10Comparable", "init"]
+- !private ["Ps10Comparable", "nan"]
+- !private ["C10MTMarathon10CudaVector", "count"]
+- ["C10MTMarathon10CudaVector", "deinit"]
+- !private ["C10MTMarathon10CudaVector", "floatPointer"]
+- !private ["Ps28CustomDebugStringConvertible", "nan"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "_getBuiltinLogicValue"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "init"]
+- !private ["Ps29CustomPlaygroundQuickLookable", "nan"]
+- !private ["Ps17CustomReflectable", "_getBuiltinLogicValue"]
+- !private ["Ps17CustomReflectable", "init"]
+- !private ["Ps17CustomReflectable", "nan"]
+- !private ["Ps23CustomStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps23CustomStringConvertible", "init"]
+- !private ["Ps23CustomStringConvertible", "nan"]
+- !private ["Ps9Equatable", "RawValue"]
+- !private ["Ps9Equatable", "_getBuiltinLogicValue"]
+- !private ["Ps9Equatable", "init"]
+- !private ["Ps9Equatable", "nan"]
+- !private ["Ps27ExpressibleByBooleanLiteral", "_getBuiltinLogicValue"]
+- !private ["Ps25ExpressibleByFloatLiteral", "nan"]
+- !private ["Ps27ExpressibleByIntegerLiteral", "init"]
+- !private ["Ps27ExpressibleByIntegerLiteral", "nan"]
+- ["Sf", "deinit"]
+- !private ["Sf", "nan"]
+- !private ["Ps13FloatingPoint", "nan"]
+- !private ["Ps8Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps8Hashable", "init"]
+- !private ["Ps8Hashable", "nan"]
+- ["Si", "deinit"]
+- ["Vs5Int32", "deinit"]
+- !private ["Vs5Int32", "init"]
+- !private ["Ps7Integer", "init"]
+- !private ["Ps17IntegerArithmetic", "init"]
+- !private ["Ps25LosslessStringConvertible", "_getBuiltinLogicValue"]
+- !private ["Ps25LosslessStringConvertible", "nan"]
+- ["Sq", "deinit"]
+- !private ["Ps16RawRepresentable", "RawValue"]
+- !private ["Ps13SignedInteger", "init"]
+- !private ["Ps12SignedNumber", "init"]
+- !private ["Ps12SignedNumber", "nan"]
+- !private ["Ps10Strideable", "init"]
+- !private ["Ps10Strideable", "nan"]
+- ["SP", "deinit"]
+- !private ["Ps15_CVarArgAligned", "nan"]
+- !private ["Ps22_CVarArgPassedAsDouble", "nan"]
+- !private ["Ps35_ExpressibleByBuiltinBooleanLiteral", "_getBuiltinLogicValue"]
+- !private ["Ps33_ExpressibleByBuiltinFloatLiteral", "nan"]
+- !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "init"]
+- !private ["Ps35_ExpressibleByBuiltinIntegerLiteral", "nan"]
+- !private ["Ps9_Hashable", "_getBuiltinLogicValue"]
+- !private ["Ps9_Hashable", "init"]
+- !private ["Ps9_Hashable", "nan"]
+- !private ["Ps14_Incrementable", "init"]
+- !private ["Ps8_Integer", "init"]
+- !private ["Ps18_IntegerArithmetic", "init"]
+- !private ["Ps21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["Ps21_ObjectiveCBridgeable", "nan"]
+- !private ["Ps14_SignedInteger", "init"]
+- !private ["Ps11_Strideable", "init"]
+- !private ["Ps11_Strideable", "nan"]
+- !private ["VSC14cublasStatus_t", "RawValue"]
+- ["VSC14cublasStatus_t", "deinit"]
+depends-nominal:
+- !private "Ps16AbsoluteValuable"
+- "Ps9AnyObject"
+- !private "Ps19BinaryFloatingPoint"
+- !private "Ps17BitwiseOperations"
+- "Sb"
+- "C10MTMarathon6CUBLAS"
+- !private "Ps7CVarArg"
+- !private "Ps10Comparable"
+- "C10MTMarathon10CudaVector"
+- !private "Ps28CustomDebugStringConvertible"
+- !private "Ps29CustomPlaygroundQuickLookable"
+- !private "Ps17CustomReflectable"
+- !private "Ps23CustomStringConvertible"
+- !private "Ps9Equatable"
+- !private "Ps27ExpressibleByBooleanLiteral"
+- !private "Ps25ExpressibleByFloatLiteral"
+- !private "Ps27ExpressibleByIntegerLiteral"
+- "Sf"
+- !private "Ps13FloatingPoint"
+- !private "Ps8Hashable"
+- "Si"
+- "Vs5Int32"
+- !private "Ps7Integer"
+- !private "Ps17IntegerArithmetic"
+- !private "Ps25LosslessStringConvertible"
+- "Sq"
+- !private "Ps16RawRepresentable"
+- !private "Ps13SignedInteger"
+- !private "Ps12SignedNumber"
+- !private "Ps10Strideable"
+- "SP"
+- !private "Ps15_CVarArgAligned"
+- !private "Ps22_CVarArgPassedAsDouble"
+- !private "Ps35_ExpressibleByBuiltinBooleanLiteral"
+- !private "Ps33_ExpressibleByBuiltinFloatLiteral"
+- !private "Ps35_ExpressibleByBuiltinIntegerLiteral"
+- !private "Ps9_Hashable"
+- !private "Ps14_Incrementable"
+- !private "Ps8_Integer"
+- !private "Ps18_IntegerArithmetic"
+- !private "Ps21_ObjectiveCBridgeable"
+- !private "Ps14_SignedInteger"
+- !private "Ps11_Strideable"
+- "VSC14cublasStatus_t"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/IOKit.swiftmodule"
+interface-hash: "7e6f59d35cbe7f8168f7d5d78ef7ff13"
