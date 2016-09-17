@@ -1,3 +1,14 @@
+//
+//  main.swift
+//  MTMarathon
+//
+//  Based on Lane's mt-marathon-swift-c
+//  https://github.com/dowobeha/mt-marathon-swift-c
+//
+//  Created by Richard Wei on 2016-09-17.
+//  Copyright © 2016 Richard Wei. All rights reserved.
+//
+
 import Foundation
 import SwiftCUDA.CUDA
 import SwiftCUDA.Runtime.API
