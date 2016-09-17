@@ -1,6 +1,0 @@
-version: "Apple Swift version 3.0 (swiftlang-800.0.46.2 clang-800.0.38)"
-options: "f09bb17ea24209eb8bef38a293c081c3"
-build_time: [527459983, 416502000]
-inputs:
-  "/Users/rxwei/Development/Swift/MTMarathon/Sources/main.swift": [527459983, 0]
-  "/Users/rxwei/Development/Swift/MTMarathon/Sources/CUDAVector.swift": [527459983, 0]
