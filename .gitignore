@@ -7,3 +7,11 @@ tmp.cu
 /Packages
 /*.xcodeproj
 /build
+doc/notes.aux
+doc/notes.log
+doc/notes.nav
+doc/notes.out
+doc/notes.pdf
+doc/notes.snm
+doc/notes.toc
+doc/notes.synctex.gz
