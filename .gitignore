@@ -2,3 +2,8 @@
 toy
 tmp.cu
 *.dryrun*
+.DS_Store
+/.build
+/Packages
+/*.xcodeproj
+/build
